@@ -27,3 +27,12 @@ No cadastro a pessoa escolhe como vai usar o app:
 O tipo fica salvo dentro dos dados do usuário (`finance_data.data.type`), então **não precisa alterar o banco**. Contas criadas antes desta mudança escolhem o tipo na próxima vez que entrarem, e qualquer pessoa pode trocar depois em **Perfil → Tipo de conta**. Ao ocultar Vendas, os dados continuam guardados.
 
 Desenvolvido por **ZoxCode**.
+
+## App para PC (Windows)
+
+1. Instale o [Node.js LTS](https://nodejs.org).
+2. Dê dois cliques em **GERAR-INSTALADOR-PC.bat**.
+3. O instalador `MoneyMap-Instalador-1.0.0.exe` aparece na pasta `instalador/`.
+
+Para só testar sem instalar: **TESTAR-APP-PC.bat**.
+O app usa o mesmo login e os mesmos dados do site (Supabase) e precisa de internet.
