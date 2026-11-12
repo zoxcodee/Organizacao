@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MoneyMap</title>
 <meta name="author" content="ZoxCode"><meta name="application-name" content="MoneyMap"><meta name="theme-color" content="#0b1020">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="shortcut icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="shortcut icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png"><link rel="manifest" href="manifest.webmanifest"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MoneyMap"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--c1:#7c5cff;--c2:#22d3ee;--card:#141a33;--tx:#eef1ff;--mut:#9aa3c7;--ok:#34d399;--bad:#f87171;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -326,4 +326,4 @@ function deposit(id){const g=S.goals.find(x=>x.id===id);
  if(!sb||SUPABASE_URL.startsWith('COLE')){$('#root').innerHTML='<div class="auth"><div class="glass" style="padding:24px;max-width:420px"><h3>⚙️ Configuração pendente</h3><p class="k">Preencha SUPABASE_URL e SUPABASE_KEY no início do index.html (veja o README).</p></div></div>';return}
  sb.auth.onAuthStateChange(ev=>{if(ev==='PASSWORD_RECOVERY')askNew()});if(location.hash.includes('type=recovery'))askNew();
  const{data}=await sb.auth.getSession();if(data.session)await boot(data.session);else authView()})();
-</script></body></html>
+</script><script>if('serviceWorker' in navigator&&/^https?:/.test(location.protocol))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))</script></body></html>
